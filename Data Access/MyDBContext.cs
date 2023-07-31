@@ -47,7 +47,7 @@ namespace DBTestWPF.Data_Access
                 MessageBox.Show($"{ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }

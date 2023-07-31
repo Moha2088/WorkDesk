@@ -29,12 +29,12 @@
             </Rectangle.Fill>
         </Rectangle>
         <Label x:Name="WelcomeLabel" Content="" HorizontalAlignment="Left" Margin="141,85,0,0" VerticalAlignment="Top" Width="176" Foreground="White" FontFamily="Bahnschrift" FontSize="16"/>
-        <ListBox x:Name="DataBox" d:ItemsSource="{Binding DataList}" Margin="527,85,25,132"/>
+        <ListBox x:Name="DataBox" d:ItemsSource="{Binding DataList}" Margin="530,105,41,133"/>
         <Label Content="Time of login: " HorizontalAlignment="Left" Margin="32,85,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Bahnschrift" Height="29" FontSize="16"/>
-        <Button x:Name="DelBtn" Content="Del User" HorizontalAlignment="Left" Margin="712,380,0,0" VerticalAlignment="Top" Height="33" Width="63" Foreground="White" Background="Black" Click="DelBtn_Click" BorderBrush="White"/>
-        <TextBox x:Name="UpdateBox" HorizontalAlignment="Left" Margin="527,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="UpdateBtn" Content="Update Username" HorizontalAlignment="Left" Margin="660,323,0,0" VerticalAlignment="Top" Width="107" Foreground="White" Background="Black" Click="UpdateBtn_Click" BorderBrush="White"/>
-        <Button x:Name="Del_All" Content="DelAll&#xD;&#xA;" HorizontalAlignment="Left" Margin="638,380,0,0" VerticalAlignment="Top" Width="63" Height="33" BorderBrush="White" Background="Black" Foreground="White" Click="Del_All_Click"/>
+        <Button x:Name="DelBtn" Content="Del User" HorizontalAlignment="Left" Margin="701,371,0,0" VerticalAlignment="Top" Height="30" Width="58" Foreground="White" Background="Black" Click="DelBtn_Click" BorderBrush="White"/>
+        <TextBox x:Name="UpdateBox" HorizontalAlignment="Left" Margin="530,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" Height="24"/>
+        <Button x:Name="UpdateBtn" Content="Update Username" HorizontalAlignment="Left" Margin="648,320,0,0" VerticalAlignment="Top" Width="111" Foreground="White" Background="Black" Click="UpdateBtn_Click" BorderBrush="White" Height="25"/>
+        <Button x:Name="Del_All" Content="DelAll&#xD;&#xA;" HorizontalAlignment="Left" Margin="632,371,0,0" VerticalAlignment="Top" Width="59" Height="30" BorderBrush="White" Background="Black" Foreground="White" Click="Del_All_Click"/>
         <Rectangle HorizontalAlignment="Left" Height="35" RadiusX="10" RadiusY="10" Stroke="Black" VerticalAlignment="Top" Width="124" Margin="527,40,0,0">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -46,6 +46,10 @@
         <Label x:Name="UserCount" Content="" HorizontalAlignment="Left" Margin="536,45,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Bahnschrift" Foreground="White" Width="111" Height="30"/>
         <Button x:Name="BackBtn" Content="Back" HorizontalAlignment="Left" Margin="14,10,0,0" VerticalAlignment="Top" Foreground="White" BorderBrush="White" FontFamily="Bahnschrift" Background="Black" Click="BackBtn_Click"/>
         <Button x:Name="DescBtn" Content="Order by DESC" HorizontalAlignment="Left" Margin="670,44,0,0" VerticalAlignment="Top" Click="DescBtn_Click" FontFamily="Bahnschrift" Foreground="White" Background="Black" BorderBrush="White"/>
+        <Rectangle x:Name="Columns" HorizontalAlignment="Left" Height="20" Margin="530,85,0,0" Stroke="#FFE2E2E2" VerticalAlignment="Top" Width="227" Fill="#FFE2E2E2"/>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="530,82,0,0" VerticalAlignment="Top" Height="26" Width="20"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="563,82,0,0" VerticalAlignment="Top" Height="26" Width="68" BorderBrush="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="557,85,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
 
 
     </Grid>

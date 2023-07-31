@@ -37,14 +37,16 @@ namespace DBTestWPF.Models
 
         public override string ToString()
         {
-            return $"Id: {UserId} Username: {UserName}";
+            return $"{UserId}        {UserName}";
         }
     }
 
     public class UserBuilder
     {
         private int UserId;
+        
         private string Username;
+        
         private string Password;
 
         public UserBuilder setUserName(string username)
