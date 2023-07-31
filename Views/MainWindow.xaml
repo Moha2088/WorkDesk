@@ -1,0 +1,43 @@
+﻿<mah:MetroWindow x:Class="DBTestWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True">
+
+    <mah:MetroWindow.Background>
+        <SolidColorBrush Opacity="0.1" Color="White"/>
+    </mah:MetroWindow.Background>
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#2E2157"/>
+                <GradientStop Color="#000000" Offset="0.993"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Label Content="Login" HorizontalAlignment="Left" Margin="35,27,0,0" VerticalAlignment="Top" Width="95" Height="38" Foreground="White" FontFamily="Bahnschrift" FontSize="18"/>
+        <TextBox x:Name="LoginNameBox" HorizontalAlignment="Left" Margin="35,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Username" HorizontalAlignment="Left" Margin="35,103,0,0" VerticalAlignment="Top" Width="95" Foreground="White" FontFamily="Bahnschrift"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="35,0,0,0" VerticalAlignment="Center" Width="76" Foreground="White" FontFamily="Bahnschrift"/>
+
+        <Button x:Name="LoginBtn" Content="Login" Foreground="White" HorizontalAlignment="Left" Margin="35,286,0,0" VerticalAlignment="Top" Height="35" Width="60" Background="#FF0B0B0B" Click="LoginBtn_Click"/>
+        <Button x:Name="RegBtn" Content="Register" HorizontalAlignment="Left" Margin="661,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.813,0.441" Height="32" Width="70" Background="#FF2E2157" Foreground="White" Click="RegBtn_Click"/>
+
+        <Label x:Name="RegUsernameLabel" Visibility="Hidden" Content="Username" HorizontalAlignment="Left" Margin="661,95,0,0" VerticalAlignment="Top" Width="95" Foreground="White" FontFamily="Bahnschrift"/>
+        <TextBox x:Name="RegUsernameBox" Visibility="Hidden" HorizontalAlignment="Left" Margin="661,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label x:Name="RegPasswordLabel" Visibility="Hidden" Content="Password" HorizontalAlignment="Left" Margin="661,191,0,0" VerticalAlignment="Top" Width="76" Foreground="White" FontFamily="Bahnschrift"/>
+
+        <Button x:Name="CreateUserBtn" Visibility="Hidden" Content="Create User" HorizontalAlignment="Left" Margin="661,297,0,0" VerticalAlignment="Top" Background="Black" Foreground="White" Height="40" Width="76" Click="Create_Btn"/>
+        <PasswordBox x:Name="RegPasswordBox" Visibility="Hidden" HorizontalAlignment="Left" Margin="661,237,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="LoginPasswordBox" HorizontalAlignment="Left" Margin="35,237,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</mah:MetroWindow>
