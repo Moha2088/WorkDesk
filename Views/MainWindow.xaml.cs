@@ -102,6 +102,8 @@ namespace DBTestWPF
             RegPasswordLabel.Visibility = Visibility.Visible;
             RegPasswordBox.Visibility = Visibility.Visible;
             CreateUserBtn.Visibility = Visibility.Visible;
+            Plus1.Visibility = Visibility.Visible;
+            Plus2.Visibility = Visibility.Visible;
 
         }
     }

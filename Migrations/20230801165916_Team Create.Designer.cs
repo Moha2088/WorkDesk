@@ -3,6 +3,7 @@ using DBTestWPF.Data_Access;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DBTestWPF.Migrations
 {
     [DbContext(typeof(MyDBContext))]
-    partial class MyDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230801165916_Team Create")]
+    partial class TeamCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,7 +42,7 @@ namespace DBTestWPF.Migrations
 
                     b.HasKey("TeamId");
 
-                    b.ToTable("Team", (string)null);
+                    b.ToTable("Team");
                 });
 
             modelBuilder.Entity("DBTestWPF.Models.User", b =>
@@ -65,7 +68,7 @@ namespace DBTestWPF.Migrations
 
                     b.HasIndex("TeamId");
 
-                    b.ToTable("UsersWPF", (string)null);
+                    b.ToTable("UsersWPF");
                 });
 
             modelBuilder.Entity("DBTestWPF.Models.User", b =>

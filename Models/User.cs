@@ -29,7 +29,7 @@ namespace DBTestWPF.Models
             UserName = username;
             Password_ = password;
         }
-
+            
         public User(int userId)
         {
             UserId = userId;
@@ -43,10 +43,8 @@ namespace DBTestWPF.Models
 
     public class UserBuilder
     {
-        private int UserId;
-        
+        private int UserId;       
         private string Username;
-        
         private string Password;
 
         public UserBuilder setUserName(string username)

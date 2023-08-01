@@ -80,7 +80,8 @@ namespace DBTestWPF.Views
         private void DescBtn_Click(object sender, RoutedEventArgs e)
         {
             //var desc = mvm.DataList
-            //    .OrderByDescending(x => x).ToList();
+            //    .OrderByDescending(x => x)
+            //    .ToList();
 
             //mvm.DataListDesc = desc;
 

@@ -21,22 +21,53 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <Label Content="Login" HorizontalAlignment="Left" Margin="35,27,0,0" VerticalAlignment="Top" Width="95" Height="38" Foreground="White" FontFamily="Bahnschrift" FontSize="18"/>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="35,27,0,0" VerticalAlignment="Top" Width="95" Height="38" Foreground="#FF918EFF" FontFamily="Bahnschrift" FontSize="18"/>
         <TextBox x:Name="LoginNameBox" HorizontalAlignment="Left" Margin="35,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
         <Label Content="Username" HorizontalAlignment="Left" Margin="35,103,0,0" VerticalAlignment="Top" Width="95" Foreground="White" FontFamily="Bahnschrift"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="35,0,0,0" VerticalAlignment="Center" Width="76" Foreground="White" FontFamily="Bahnschrift"/>
-        <Button x:Name="RegBtn" Content="Register" HorizontalAlignment="Left" Margin="661,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.813,0.441" Height="32" Width="70" Background="#FF2E2157" Foreground="White" Click="RegBtn_Click"/>
+        <Button x:Name="RegBtn" Cursor="Hand" Content="Register" HorizontalAlignment="Left" Margin="661,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.813,0.441" Height="32" Width="70" Background="#FF2E2157" Foreground="White" Click="RegBtn_Click"/>
 
         <Label x:Name="RegUsernameLabel" Visibility="Hidden" Content="Username" HorizontalAlignment="Left" Margin="661,95,0,0" VerticalAlignment="Top" Width="95" Foreground="White" FontFamily="Bahnschrift"/>
         <TextBox x:Name="RegUsernameBox" Visibility="Hidden" HorizontalAlignment="Left" Margin="661,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
         <Label x:Name="RegPasswordLabel" Visibility="Hidden" Content="Password" HorizontalAlignment="Left" Margin="661,191,0,0" VerticalAlignment="Top" Width="76" Foreground="White" FontFamily="Bahnschrift"/>
 
-        <Button x:Name="CreateUserBtn" Visibility="Hidden" Content="Create User" HorizontalAlignment="Left" Margin="661,297,0,0" VerticalAlignment="Top" Background="Black" Foreground="White" Height="40" Width="76" Click="Create_Btn"/>
+        <Button x:Name="CreateUserBtn" Cursor="Hand" Visibility="Hidden" Content="Create User                " HorizontalAlignment="Left" Margin="661,297,0,0" VerticalAlignment="Top" Background="Black" Foreground="White" Height="40" Width="124" Click="Create_Btn"/>
         <PasswordBox x:Name="RegPasswordBox" Visibility="Hidden" HorizontalAlignment="Left" Margin="661,237,0,0" VerticalAlignment="Top" Width="120"/>
         <PasswordBox x:Name="LoginPasswordBox" HorizontalAlignment="Left" Margin="35,237,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="LoginBtn" Content="Login" Foreground="White" HorizontalAlignment="Left" Margin="35,286,0,0" VerticalAlignment="Top" Height="35" Width="60" Background="#FF0B0B0B" Click="LoginBtn_Click"/>
+        <Rectangle x:Name="Plus2" Visibility="Hidden" HorizontalAlignment="Left" Height="24" Margin="762,305,0,0" Stroke="White" VerticalAlignment="Top" Width="2" Fill="White"/>
+        <Rectangle x:Name="Plus1" Visibility="Hidden" HorizontalAlignment="Left" Height="26" Margin="762,303,0,0" Stroke="White" VerticalAlignment="Top" Width="2" Fill="White" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.036" ScaleY="0.965"/>
+                    <SkewTransform AngleX="0" AngleY="0.005"/>
+                    <RotateTransform Angle="89.931"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Button x:Name="LoginBtn" Content="Login                " Cursor="Hand" Foreground="White" HorizontalAlignment="Left" Margin="35,286,0,0" VerticalAlignment="Top" Height="35" Width="107" Background="#FF0B0B0B" Click="LoginBtn_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="115,299,0,0" Stroke="White" VerticalAlignment="Top" Width="15" Fill="White" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="42.626"/>
+                    <TranslateTransform X="1.567" Y="0.189"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="117,309,0,0" Stroke="White" VerticalAlignment="Top" Width="16" Fill="White" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-47.323"/>
+                    <TranslateTransform X="-0.882" Y="0.497"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
 
     </Grid>
 </mah:MetroWindow>

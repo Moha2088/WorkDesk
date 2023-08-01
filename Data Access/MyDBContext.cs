@@ -17,6 +17,8 @@ namespace DBTestWPF.Data_Access
 
         public DbSet<User> UsersWPF { get; set; } = null!;
 
+        public DbSet<Team> Team { get; set; } = null!;
+
         public MyDBContext()
         {
             IConfiguration config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();

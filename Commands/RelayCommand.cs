@@ -12,7 +12,7 @@ namespace DBTestWPF.Commands
         public event EventHandler? CanExecuteChanged;
 
         private Action<object> _Execute { get; set; }
-        
+
         private Predicate<object> _CanExecute { get; set; }
 
 
