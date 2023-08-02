@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"  
         AllowsTransparency="True"
-        Title="LoginPage" Height="450" Width="800">
+        Title="LoginPage" Height="550" Width="900">
 
     <mah:MetroWindow.Background>
         <SolidColorBrush Opacity="0.1" Color="White"/>
@@ -20,7 +20,7 @@
                 <GradientStop Color="#000000" Offset="0.993"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Rectangle HorizontalAlignment="Left" Height="78" RadiusX="10" RadiusY="10" Stroke="Black" VerticalAlignment="Top" Width="297" Margin="25,76,0,0">
+        <Rectangle HorizontalAlignment="Left" Height="81" RadiusX="10" RadiusY="10" Stroke="Black" VerticalAlignment="Top" Width="212" Margin="51,48,0,0">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -28,14 +28,14 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Label x:Name="WelcomeLabel" Content="" HorizontalAlignment="Left" Margin="141,85,0,0" VerticalAlignment="Top" Width="176" Foreground="White" FontFamily="Bahnschrift" FontSize="16"/>
-        <ListBox x:Name="DataBox" d:ItemsSource="{Binding DataList}" Margin="530,105,41,133"/>
-        <Label Content="Time of login: " HorizontalAlignment="Left" Margin="32,85,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Bahnschrift" Height="29" FontSize="16"/>
-        <Button x:Name="DelBtn" Content="Del User" HorizontalAlignment="Left" Margin="701,371,0,0" VerticalAlignment="Top" Height="30" Width="58" Foreground="White" Background="Black" Click="DelBtn_Click" BorderBrush="White"/>
-        <TextBox x:Name="UpdateBox" HorizontalAlignment="Left" Margin="530,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" Height="24"/>
-        <Button x:Name="UpdateBtn" Content="Update Username" HorizontalAlignment="Left" Margin="648,320,0,0" VerticalAlignment="Top" Width="111" Foreground="White" Background="Black" Click="UpdateBtn_Click" BorderBrush="White" Height="25"/>
-        <Button x:Name="Del_All" Content="DelAll&#xD;&#xA;" HorizontalAlignment="Left" Margin="632,371,0,0" VerticalAlignment="Top" Width="59" Height="30" BorderBrush="White" Background="Black" Foreground="White" Click="Del_All_Click"/>
-        <Rectangle HorizontalAlignment="Left" Height="35" RadiusX="10" RadiusY="10" Stroke="Black" VerticalAlignment="Top" Width="124" Margin="527,40,0,0">
+        <Label x:Name="WelcomeLabel" Content="" HorizontalAlignment="Left" Margin="66,89,0,0" VerticalAlignment="Top" Width="160" Foreground="White" FontFamily="Bahnschrift" FontSize="16" Height="30"/>
+        <ListBox x:Name="DataBox" d:ItemsSource="{Binding DataList}" Margin="549,101,22,293"/>
+        <Label Content="Login Time:" HorizontalAlignment="Left" Margin="103,56,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Bahnschrift" Height="30" FontSize="16" Width="108"/>
+        <Button x:Name="DelBtn" Content="Del User" HorizontalAlignment="Left" Margin="726,299,0,0" VerticalAlignment="Top" Height="30" Width="58" Foreground="White" Background="Black" Click="DelBtn_Click" BorderBrush="White"/>
+        <TextBox x:Name="UpdateBox" HorizontalAlignment="Left" Margin="552,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" Height="24"/>
+        <Button x:Name="UpdateBtn" Content="Update Username" HorizontalAlignment="Left" Margin="658,260,0,0" VerticalAlignment="Top" Width="126" Foreground="White" Background="Black" Click="UpdateBtn_Click" BorderBrush="White" Height="25"/>
+        <Button x:Name="Del_All" Content="DelAll&#xD;&#xA;" HorizontalAlignment="Left" Margin="658,299,0,0" VerticalAlignment="Top" Width="58" Height="30" BorderBrush="White" Background="Black" Foreground="White" Click="Del_All_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="35" RadiusX="10" RadiusY="10" Stroke="Black" VerticalAlignment="Top" Width="124" Margin="546,36,0,0">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -43,13 +43,42 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Label x:Name="UserCount" Content="" HorizontalAlignment="Left" Margin="536,45,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Bahnschrift" Foreground="White" Width="111" Height="30"/>
+        <Label x:Name="UserCount" Content="" HorizontalAlignment="Left" Margin="555,41,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Bahnschrift" Foreground="White" Width="111" Height="30"/>
         <Button x:Name="BackBtn" Content="Back" HorizontalAlignment="Left" Margin="14,10,0,0" VerticalAlignment="Top" Foreground="White" BorderBrush="White" FontFamily="Bahnschrift" Background="Black" Click="BackBtn_Click"/>
-        <Button x:Name="DescBtn" Content="Order by DESC" HorizontalAlignment="Left" Margin="670,44,0,0" VerticalAlignment="Top" Click="DescBtn_Click" FontFamily="Bahnschrift" Foreground="White" Background="Black" BorderBrush="White"/>
-        <Rectangle x:Name="Columns" HorizontalAlignment="Left" Height="20" Margin="530,85,0,0" Stroke="#FFE2E2E2" VerticalAlignment="Top" Width="227" Fill="#FFE2E2E2"/>
-        <Label Content="Id" HorizontalAlignment="Left" Margin="530,82,0,0" VerticalAlignment="Top" Height="26" Width="20"/>
-        <Label Content="Username" HorizontalAlignment="Left" Margin="563,82,0,0" VerticalAlignment="Top" Height="26" Width="68" BorderBrush="Black"/>
-        <Rectangle HorizontalAlignment="Left" Height="20" Margin="557,85,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
+        <Button x:Name="DescBtn" Content="Order by DESC" HorizontalAlignment="Left" Margin="689,40,0,0" VerticalAlignment="Top" Click="DescBtn_Click" FontFamily="Bahnschrift" Foreground="White" Background="Black" BorderBrush="White"/>
+        <Rectangle x:Name="Columns" HorizontalAlignment="Left" Height="20" Margin="549,81,0,0" Stroke="#FFE2E2E2" VerticalAlignment="Top" Width="227" Fill="#FFE2E2E2"/>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="549,78,0,0" VerticalAlignment="Top" Height="26" Width="20"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="582,78,0,0" VerticalAlignment="Top" Height="26" Width="68" BorderBrush="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="576,81,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
+        <ListBox x:Name="TeamBox" ItemsSource="{Binding TeamList}" Margin="32,225,554,177"/>
+        <Rectangle x:Name="Columns_Copy" HorizontalAlignment="Left" Height="20" Margin="32,205,0,0" Stroke="#FFE2E2E2" VerticalAlignment="Top" Width="314" Fill="#FFE2E2E2"/>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="34,202,0,0" VerticalAlignment="Top" Height="26" Width="20"/>
+        <Label Content="TeamMembers" HorizontalAlignment="Left" Margin="168,202,0,0" VerticalAlignment="Top" Height="26" Width="90" BorderBrush="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="61,205,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="20" Margin="162,205,0,0" Stroke="Black" VerticalAlignment="Top" Width="1"/>
+        <Label Content="TeamName" HorizontalAlignment="Left" Margin="72,202,0,0" VerticalAlignment="Top" Height="26" Width="90" BorderBrush="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="35" RadiusX="10" RadiusY="10" Stroke="Black" VerticalAlignment="Top" Width="124" Margin="26,154,0,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="TeamCount" Content="" HorizontalAlignment="Left" Margin="35,159,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Bahnschrift" Foreground="White" Width="111" Height="30"/>
+        <TextBox x:Name="TeamNameBox" HorizontalAlignment="Left" Margin="34,393,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Height="23" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button x:Name="CreateTeamBtn" Content="Create Team" HorizontalAlignment="Left" Margin="168,394,0,0" VerticalAlignment="Top" Width="126" Foreground="White" Background="Black" Click="UpdateBtn_Click" BorderBrush="White" Height="25"/>
+        <Label Content="Team Name" HorizontalAlignment="Left" Margin="32,369,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Bahnschrift" Height="27" Width="105"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="32,427,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Bahnschrift" Height="27" Width="105"/>
 
 
     </Grid>

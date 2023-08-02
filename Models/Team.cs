@@ -34,8 +34,6 @@ namespace DBTestWPF.Models
         {
             return $"TeamId:     {TeamId}   TeamName:   {TeamName}  TeamMembers:    {TeamMembers}";
         }
-
-
     }
 
     public class TeamBuilder

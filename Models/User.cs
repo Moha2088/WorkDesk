@@ -17,7 +17,7 @@ namespace DBTestWPF.Models
         [Column(TypeName = "nvarchar(20)")]
         public string Password_ { get; set; } = null!;
 
-
+      
 
         public User(string username)
         {

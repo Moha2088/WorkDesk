@@ -33,11 +33,7 @@ namespace DBTestWPF.Views
 
             WelcomeLabel.Content = DateTime.Now.ToString();
             UserCount.Content = $"Users: {mvm.DataList.Count}";
-
-            if (mvm.DataList == null)
-            {
-                UserCount.Content = "No registered users";
-            }
+            TeamCount.Content = $"Teams: {mvm.TeamList.Count}";
         }
 
         private void DelBtn_Click(object sender, RoutedEventArgs e)

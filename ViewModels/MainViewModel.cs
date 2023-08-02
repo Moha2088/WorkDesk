@@ -15,15 +15,21 @@ namespace DBTestWPF.ViewModels
     {
         public MyDBContext dbContext = new();
 
-        public MainViewModel() 
+        public MainViewModel()
         {
             var readUsers = from user in dbContext.UsersWPF
                             select user;
 
-           DataList = readUsers.ToList();
+            var readTeam = from teams in dbContext.Team
+                           select teams;
+
+            DataList = readUsers.ToList();
+            TeamList = readTeam.ToList();
         }
 
         public List<User> DataList = new();
+
+        public List<Team> TeamList = new();
 
         public List<User> DataListDesc = new();
     }
