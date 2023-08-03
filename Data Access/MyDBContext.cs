@@ -54,5 +54,30 @@ namespace DBTestWPF.Data_Access
                 MessageBox.Show($"{ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        public void Del_All_Teams()
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("DELETE FROM TEAM", con);
+                    SqlCommand cmd2 = new SqlCommand("DBCC CHECKIDENT ('TEAM', RESEED, 0)", con);
+                    cmd.ExecuteNonQuery();
+                    cmd2.ExecuteNonQuery();
+                }
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }
