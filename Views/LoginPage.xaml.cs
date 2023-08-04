@@ -91,7 +91,6 @@ namespace DBTestWPF.Views
             //mvm.DataListDesc = desc;
 
             //DataBox.ItemsSource = mvm.DataListDesc;
-
         }
 
         private void CreateTeamBtn_Click(object sender, RoutedEventArgs e)

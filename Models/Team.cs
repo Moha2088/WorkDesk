@@ -32,7 +32,7 @@ namespace DBTestWPF.Models
 
         public override string ToString()
         {
-            return $"{TeamId}     {TeamName}                         {TeamMembers}    ";
+            return $"TeamId : {TeamId}\nTeamName : {TeamName}\nTeamMembers : {TeamMembers}\n";
         }
     }
 
