@@ -398,3 +398,7 @@ FodyWeavers.xsd
 *.sln.iml
 DBTestWPF.csproj
 DBTestWPF.csproj
+WorkDesk.csproj
+*.csproj
+WorkDesk.csproj
+*.csproj

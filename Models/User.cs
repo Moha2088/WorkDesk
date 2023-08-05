@@ -64,5 +64,4 @@ namespace DBTestWPF.Models
             return new User(Username, Password);
         }
     }
-
 }
