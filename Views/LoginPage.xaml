@@ -1,313 +1,372 @@
-﻿<mah:MetroWindow x:Class="DBTestWPF.Views.LoginPage"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        mc:Ignorable="d"
-        WindowStartupLocation="CenterScreen"  
-        AllowsTransparency="True"
-        Title="LoginPage"
-                 Height="550" 
-                 Width="900">
+﻿<mah:MetroWindow
+    AllowsTransparency="True"
+    Height="550"
+    Title="UserPage"
+    Width="900"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d"
+    x:Class="DBTestWPF.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <mah:MetroWindow.Background>
-        <SolidColorBrush Opacity="0.1" 
-                         Color="White"/>
+        <SolidColorBrush Color="White" Opacity="0.1" />
     </mah:MetroWindow.Background>
 
     <Grid>
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" 
-                                 StartPoint="0.5,0">
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
 
-                <GradientStop Color="#2E2157"/>
+                <GradientStop Color="#2E2157" />
 
-                <GradientStop Color="#000000" 
-                              Offset="0.993"/>
+                <GradientStop Color="#000000" Offset="0.993" />
             </LinearGradientBrush>
         </Grid.Background>
 
-        <Rectangle HorizontalAlignment="Left" 
-                   Height="35" 
-                   RadiusX="10" 
-                   RadiusY="10" 
-                   Stroke="Black" 
-                   VerticalAlignment="Top" 
-                   Width="124" 
-                   Margin="549,56,0,0">
-
-            <Rectangle.Fill>
-
-                <LinearGradientBrush 
-                    EndPoint="0.5,1" 
-                    StartPoint="0.5,0">
-                    <GradientStop 
-                        Color="Black"/>
-                    <GradientStop Color="Black" 
-                                  Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-
-        <Button x:Name="DescBtn" 
-                Content="Order by DESC" 
-                HorizontalAlignment="Left" 
-                Margin="692,60,0,0" 
-                VerticalAlignment="Top" 
-                Click="DescBtn_Click" 
-                FontFamily="Bahnschrift" 
-                Foreground="#FF9F8BFF" 
-                Background="{x:Null}" 
-                BorderBrush="#FF9F8BFF"/>
-
-        <ListBox x:Name="DataBox" FontFamily="Bahnschrift" d:ItemsSource="{Binding DataList}" Margin="552,121,19,180"/>
-
-
-
-
-        <Button x:Name="DelBtn" 
-                Content="Del User" 
-                HorizontalAlignment="Left" 
-                Margin="733,419,0,0" 
-                VerticalAlignment="Top" 
-                Height="30" 
-                Width="58" 
-                Foreground="#FF9F8BFF" 
-                Background="Black" 
-                Click="DelBtn_Click" 
-                BorderBrush="#FF9F8BFF"/>
-
-        <TextBox x:Name="UpdateBox" 
-                 HorizontalAlignment="Left" 
-                 FontFamily="Bahnschrift" 
-                 Margin="559,380,0,0" 
-                 TextWrapping="Wrap" 
-                 VerticalAlignment="Top" 
-                 Width="98" 
-                 Height="24"/>
-
-        <Button x:Name="UpdateBtn" 
-                Content="Update Username" 
-                HorizontalAlignment="Left" 
-                Margin="665,380,0,0" 
-                VerticalAlignment="Top" 
-                Width="126" 
-                Foreground="#FF9F8BFF" 
-                Background="Black" 
-                Click="UpdateBtn_Click" 
-                BorderBrush="#FF9F8BFF" 
-                Height="25"/>
-
-        <Button x:Name="Del_All" 
-                Content="DelAll&#xD;&#xA;" 
-                HorizontalAlignment="Left" 
-                Margin="665,419,0,0" 
-                VerticalAlignment="Top" 
-                Width="58" 
-                Height="30" 
-                BorderBrush="#FF9F8BFF" 
-                Background="Black" 
-                Foreground="#FF9F8BFF" 
-                Click="Del_All_Click"/>
-
-        <Label x:Name="UserCount" 
-               Content="" 
-               HorizontalAlignment="Left" 
-               Margin="558,61,0,0" 
-               VerticalAlignment="Top" 
-               FontSize="14" 
-               FontFamily="Bahnschrift" 
-               Foreground="#FF9F8BFF" 
-               Width="111" 
-               Height="30"/>
-
-        <Button x:Name="BackBtn" 
-                Content="LogOut" 
-                HorizontalAlignment="Left" 
-                Margin="10,10,0,0" 
-                VerticalAlignment="Top" 
-                Foreground="#FF9F8BFF" 
-                BorderBrush="#FF9F8BFF" 
-                FontFamily="Bahnschrift" 
-                Background="{x:Null}" 
-                Click="BackBtn_Click" Height="22" Width="49"/>
-
-        <Rectangle x:Name="Columns" 
-                     HorizontalAlignment="Left" 
-                     Height="20" 
-                     Margin="552,101,0,0" 
-                     Stroke="#FFE2E2E2" 
-                     VerticalAlignment="Top" 
-                     Width="227" 
-                     Fill="#FFE2E2E2"/>
-
-        <Label Content="Id" 
-               HorizontalAlignment="Left" 
-               Margin="552,98,0,0"
-               VerticalAlignment="Top"
-               Height="26" 
-               Width="20"/>
-
-        <Label Content="Username" 
-               HorizontalAlignment="Left"
-               Margin="585,98,0,0" 
-               VerticalAlignment="Top"
-               Height="26" Width="68" 
-               BorderBrush="Black"/>
-
-        <Rectangle HorizontalAlignment="Left"
-                   Height="20" 
-                   Margin="579,101,0,0" 
-                   Stroke="Black" 
-                   VerticalAlignment="Top" 
-                   Width="1"/>
-
-        <ListBox x:Name="TeamBox" 
-                 ItemsSource="{Binding TeamList}" 
-                 FontFamily="Bahnschrift" 
-                 Margin="45,101,517,245"/>
-
-        <Rectangle HorizontalAlignment="Left"
-                   Height="35"
-                   RadiusX="10" 
-                   RadiusY="10" 
-                   Stroke="Black"
-                   VerticalAlignment="Top"
-                   Width="124" 
-                   Margin="45,56,0,0">
-
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" 
-                                     StartPoint="0.5,0">
-
-                    <GradientStop Color="Black"/>
-
-                    <GradientStop Color="Black"
-                                  Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-
-        <Label x:Name="TeamCount" 
-               Content="" 
-               HorizontalAlignment="Left" 
-               Margin="55,61,0,0" 
-               VerticalAlignment="Top" 
-               FontSize="14" 
-               FontFamily="Bahnschrift" 
-               Foreground="#FF9F8BFF" 
-               Width="110" 
-               Height="30"/>
-
-        <Button x:Name="CreateTeamBtn" 
-                Visibility="Hidden" 
-                Content="Create Team" 
-                HorizontalAlignment="Left" 
-                Margin="47,435,0,0" 
-                VerticalAlignment="Top" 
-                Width="126" 
-                Foreground="#FF9F8BFF" 
-                Background="Black" 
-                BorderBrush="#FF9F8BFF" 
-                Height="25" 
-                Click="CreateTeamBtn_Click"/>
-
-        <Label x:Name="TeamNameLabel" 
-               Visibility="Hidden" 
-               Content="Team Name" 
-               HorizontalAlignment="Left" 
-               Margin="45,289,0,0" 
-               VerticalAlignment="Top" 
-               Foreground="White" 
-               FontFamily="Bahnschrift" 
-               Height="27" 
-               Width="105"/>
-
-        <Label x:Name="TeamMembersLabel" 
-               Visibility="Hidden" 
-               Content="Team Members" 
-               HorizontalAlignment="Left" 
-               Margin="45,354,0,0" 
-               VerticalAlignment="Top" 
-               Foreground="White" 
-               FontFamily="Bahnschrift" 
-               Height="27" 
-               Width="105"/>
-
-        <TextBox x:Name="TeamNameBox" 
-                 Visibility="Hidden" 
-                 HorizontalAlignment="Left" 
-                 Margin="47,321,0,0" 
-                 TextWrapping="Wrap" 
-                 VerticalAlignment="Top" 
-                 Width="120" 
-                 FontFamily="Bahnschrift"/>
-
-        <TextBox x:Name="TeamMembersBox" 
-                 Visibility="Hidden" 
-                 HorizontalAlignment="Left" 
-                 Margin="48,386,0,0" 
-                 TextWrapping="Wrap" 
-                 VerticalAlignment="Top" 
-                 Width="120" 
-                 FontFamily="Bahnschrift"/>
-
-        <Button x:Name="DeleteTeamBtn" 
-                Content="Delete team" 
-                HorizontalAlignment="Left" 
-                Margin="186,473,0,0" 
-                VerticalAlignment="Top" 
-                Width="126" 
-                Foreground="#FF9F8BFF" 
-                Background="Black" 
-                BorderBrush="#FF9F8BFF" 
-                Height="25" 
-                Click="DeleteTeamBtn_Click"/>
-
-        <Button x:Name="DeleteAllTeams" 
-                Content="delall teams" 
-                HorizontalAlignment="Left" 
-                Margin="48,473,0,0" 
-                VerticalAlignment="Top" 
-                Width="126" 
-                Foreground="#FF9F8BFF" 
-                Background="Black" 
-                BorderBrush="#FF9F8BFF" 
-                Height="25" 
-                Click="DeleteAllTeams_Click"/>
-
-        <Button x:Name="CreateTeamTabBtn" 
-                Content="Create New Team" 
-                HorizontalAlignment="Left" 
-                Margin="45,302,0,0" 
-                VerticalAlignment="Top"
-                Height="34" 
-                Width="105" 
-                BorderBrush="#FF9F8BFF"
-                Foreground="#FF9F8BFF" 
-                Background="Black" 
-                Click="CreateTeamTabBtn_Click"/>
-        <Rectangle HorizontalAlignment="Left"
-            Height="36"
-            RadiusX="10" 
-            RadiusY="10" 
+        <Rectangle
+            Height="35"
+            HorizontalAlignment="Left"
+            Margin="549,56,0,0"
+            RadiusX="10"
+            RadiusY="10"
             Stroke="Black"
             VerticalAlignment="Top"
-            Width="124" 
-            Margin="392,22,0,0">
+            Width="124">
 
             <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" 
-                    StartPoint="0.5,0">
 
-                    <GradientStop Color="Black"/>
-
-                    <GradientStop Color="Black"
-                        Offset="1"/>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" />
+                    <GradientStop Color="Black" Offset="1" />
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Label Content="Dashboard" HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" Foreground="#FF9F8BFF" FontFamily="Bahnschrift" FontSize="14"/>
+
+        <Button
+            Background="{x:Null}"
+            BorderBrush="#FF9F8BFF"
+            Click="DescBtn_Click"
+            Content="Order by DESC"
+            FontFamily="Bahnschrift"
+            Foreground="#FF9F8BFF"
+            HorizontalAlignment="Left"
+            Margin="692,60,0,0"
+            VerticalAlignment="Top"
+            x:Name="DescBtn" />
+
+        <ListBox
+            FontFamily="Bahnschrift"
+            Margin="552,121,19,180"
+            d:ItemsSource="{Binding DataList}"
+            x:Name="DataBox" />
+
+
+
+
+        <Button
+            Background="Black"
+            BorderBrush="#FF9F8BFF"
+            Click="DelBtn_Click"
+            Content="Del User"
+            Foreground="#FF9F8BFF"
+            Height="30"
+            HorizontalAlignment="Left"
+            Margin="733,419,0,0"
+            VerticalAlignment="Top"
+            Width="58"
+            x:Name="DelBtn" />
+
+        <TextBox
+            FontFamily="Bahnschrift"
+            Height="24"
+            HorizontalAlignment="Left"
+            Margin="559,380,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="98"
+            x:Name="UpdateBox" />
+
+        <Button
+            Background="Black"
+            BorderBrush="#FF9F8BFF"
+            Click="UpdateBtn_Click"
+            Content="Update Username"
+            Foreground="#FF9F8BFF"
+            Height="25"
+            HorizontalAlignment="Left"
+            Margin="665,380,0,0"
+            VerticalAlignment="Top"
+            Width="126"
+            x:Name="UpdateBtn" />
+
+        <Button
+            Background="Black"
+            BorderBrush="#FF9F8BFF"
+            Click="Del_All_Click"
+            Content="DelAll&#xD;&#xA;"
+            Foreground="#FF9F8BFF"
+            Height="30"
+            HorizontalAlignment="Left"
+            Margin="665,419,0,0"
+            VerticalAlignment="Top"
+            Width="58"
+            x:Name="Del_All" />
+
+        <Label
+            Content=""
+            FontFamily="Bahnschrift"
+            FontSize="14"
+            Foreground="#FF9F8BFF"
+            Height="30"
+            HorizontalAlignment="Left"
+            Margin="558,61,0,0"
+            VerticalAlignment="Top"
+            Width="111"
+            x:Name="UserCount" />
+
+        <Button
+            Background="{x:Null}"
+            BorderBrush="#FF9F8BFF"
+            Click="BackBtn_Click"
+            Content="LogOut"
+            FontFamily="Bahnschrift"
+            Foreground="#FF9F8BFF"
+            Height="22"
+            HorizontalAlignment="Left"
+            Margin="10,10,0,0"
+            VerticalAlignment="Top"
+            Width="49"
+            x:Name="BackBtn" />
+
+        <Rectangle
+            Fill="#FFE2E2E2"
+            Height="20"
+            HorizontalAlignment="Left"
+            Margin="552,101,0,0"
+            Stroke="#FFE2E2E2"
+            VerticalAlignment="Top"
+            Width="227"
+            x:Name="Columns" />
+
+        <Label
+            Content="Id"
+            Height="26"
+            HorizontalAlignment="Left"
+            Margin="552,98,0,0"
+            VerticalAlignment="Top"
+            Width="20" />
+
+        <Label
+            BorderBrush="Black"
+            Content="Username"
+            Height="26"
+            HorizontalAlignment="Left"
+            Margin="585,98,0,0"
+            VerticalAlignment="Top"
+            Width="68" />
+
+        <Rectangle
+            Height="20"
+            HorizontalAlignment="Left"
+            Margin="579,101,0,0"
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="1" />
+
+        <ListBox
+            FontFamily="Bahnschrift"
+            ItemsSource="{Binding TeamList}"
+            Margin="45,101,517,245"
+            x:Name="TeamBox" />
+
+        <Rectangle
+            Height="35"
+            HorizontalAlignment="Left"
+            Margin="45,56,0,0"
+            RadiusX="10"
+            RadiusY="10"
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="124">
+
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+
+                    <GradientStop Color="Black" />
+
+                    <GradientStop Color="Black" Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Label
+            Content=""
+            FontFamily="Bahnschrift"
+            FontSize="14"
+            Foreground="#FF9F8BFF"
+            Height="30"
+            HorizontalAlignment="Left"
+            Margin="55,61,0,0"
+            VerticalAlignment="Top"
+            Width="110"
+            x:Name="TeamCount" />
+
+        <Button
+            Background="Black"
+            BorderBrush="#FF9F8BFF"
+            Click="CreateTeamBtn_Click"
+            Content="Create Team"
+            Foreground="#FF9F8BFF"
+            Height="25"
+            HorizontalAlignment="Left"
+            Margin="47,435,0,0"
+            VerticalAlignment="Top"
+            Visibility="Hidden"
+            Width="126"
+            x:Name="CreateTeamBtn" />
+
+        <Label
+            Content="Team Name"
+            FontFamily="Bahnschrift"
+            Foreground="White"
+            Height="27"
+            HorizontalAlignment="Left"
+            Margin="45,289,0,0"
+            VerticalAlignment="Top"
+            Visibility="Hidden"
+            Width="105"
+            x:Name="TeamNameLabel" />
+
+        <Label
+            Content="Team Members"
+            FontFamily="Bahnschrift"
+            Foreground="White"
+            Height="27"
+            HorizontalAlignment="Left"
+            Margin="45,354,0,0"
+            VerticalAlignment="Top"
+            Visibility="Hidden"
+            Width="105"
+            x:Name="TeamMembersLabel" />
+
+        <TextBox
+            FontFamily="Bahnschrift"
+            HorizontalAlignment="Left"
+            Margin="47,321,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Visibility="Hidden"
+            Width="120"
+            x:Name="TeamNameBox" />
+
+        <TextBox
+            FontFamily="Bahnschrift"
+            HorizontalAlignment="Left"
+            Margin="48,386,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Visibility="Hidden"
+            Width="120"
+            x:Name="TeamMembersBox" />
+
+        <Button
+            Background="Black"
+            BorderBrush="#FF9F8BFF"
+            Click="DeleteTeamBtn_Click"
+            Content="Delete team"
+            Foreground="#FF9F8BFF"
+            Height="25"
+            HorizontalAlignment="Left"
+            Margin="186,473,0,0"
+            VerticalAlignment="Top"
+            Width="126"
+            x:Name="DeleteTeamBtn" />
+
+        <Button
+            Background="Black"
+            BorderBrush="#FF9F8BFF"
+            Click="DeleteAllTeams_Click"
+            Content="delall teams"
+            Foreground="#FF9F8BFF"
+            Height="25"
+            HorizontalAlignment="Left"
+            Margin="48,473,0,0"
+            VerticalAlignment="Top"
+            Width="126"
+            x:Name="DeleteAllTeams" />
+
+        <Button
+            Background="Black"
+            BorderBrush="#FF9F8BFF"
+            Click="CreateTeamTabBtn_Click"
+            Content="Create New Team"
+            Foreground="#FF9F8BFF"
+            Height="34"
+            HorizontalAlignment="Left"
+            Margin="45,302,0,0"
+            VerticalAlignment="Top"
+            Width="105"
+            x:Name="CreateTeamTabBtn" />
+        <Rectangle
+            Height="36"
+            HorizontalAlignment="Left"
+            Margin="392,22,0,0"
+            RadiusX="10"
+            RadiusY="10"
+            Stroke="Black"
+            VerticalAlignment="Top"
+            Width="124">
+
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+
+                    <GradientStop Color="Black" />
+
+                    <GradientStop Color="Black" Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label
+            Content="Dashboard"
+            FontFamily="Bahnschrift"
+            FontSize="14"
+            Foreground="#FF9F8BFF"
+            HorizontalAlignment="Center"
+            Margin="0,26,0,0"
+            VerticalAlignment="Top" />
+
+        <TextBox x:Name="UpdateTeamMembersBox" 
+                 HorizontalAlignment="Left" 
+                 Margin="189,321,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="120" 
+                 Visibility="Hidden"/>
+
+        <Label x:Name="UpdateTeamMembersLabel" 
+               Content="Update Teammembers" 
+               HorizontalAlignment="Left" 
+               Margin="184,290,0,0" 
+               VerticalAlignment="Top" 
+               Foreground="White" 
+               FontFamily="Bahnschrift"
+               Visibility="Hidden"/>
+
+        <Button x:Name="UpdateTeamMembersBtn" 
+                Content="Update" 
+                HorizontalAlignment="Left" 
+                Margin="189,357,0,0" 
+                VerticalAlignment="Top" 
+                Width="120" 
+                Foreground="#FF9F8BFF" 
+                BorderBrush="#FF9F8BFF" 
+                Background="Black" Click="UpdateTeamMembersBtn_Click"
+                Visibility="Hidden"/>
+
+        <Button x:Name="ShowUpdate" Content="Update" HorizontalAlignment="Left" Margin="214,302,0,0" VerticalAlignment="Top" Width="60" FontFamily="Bahnschrift" Foreground="#FF9F8BFF" Background="Black" BorderBrush="#FF9F8BFF" Click="ShowUpdate_Click" Height="32"/>
+
     </Grid>
 </mah:MetroWindow>

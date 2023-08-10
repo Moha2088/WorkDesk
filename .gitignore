@@ -402,3 +402,9 @@ WorkDesk.csproj
 *.csproj
 WorkDesk.csproj
 *.csproj
+.idea/.idea.WorkDesk/.idea/dataSources.xml
+.idea/.idea.WorkDesk/.idea/indexLayout.xml
+.idea/.idea.WorkDesk/.idea/vcs.xml
+WorkDesk.csproj
+WorkDesk.csproj
+AssemblyInfo.cs

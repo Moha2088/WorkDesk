@@ -31,6 +31,6 @@ namespace DBTestWPF.ViewModels
 
         public List<Team> TeamList = new();
 
-        //public List<User> DataListDesc = new();
+        // public List<User> DataListDesc = new();
     }
 }

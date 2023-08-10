@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
+using System.Windows.Documents;
 using DBTestWPF.Models;
 using DBTestWPF.ViewModels;
 using DBTestWPF.Views;
 using Microsoft.Data.SqlClient;
+using System.Collections.Generic;
 
 namespace DBTestWPF
 {
@@ -60,9 +62,10 @@ namespace DBTestWPF
         {
             try
             {
-                bool valid = mvm.dbContext.UsersWPF.Any(u => LoginNameBox.Text == u.UserName && LoginPasswordBox.Password == u.Password_);
+                bool valid = mvm.dbContext.UsersWPF
+                            .Any(u => LoginNameBox.Text == u.UserName && LoginPasswordBox.Password == u.Password_);
 
-                if (valid == true)
+                if (valid)
                 {
                     LoginPage loginPage = new();
                     loginPage.Show();
@@ -91,7 +94,6 @@ namespace DBTestWPF
             CreateUserBtn.Visibility = Visibility.Visible;
             Plus1.Visibility = Visibility.Visible;
             Plus2.Visibility = Visibility.Visible;
-
         }
     }
 }
