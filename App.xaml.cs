@@ -1,5 +1,5 @@
-﻿using DBTestWPF.ViewModels;
-using DBTestWPF.Views;
+﻿using WorkDesk.ViewModels;
+using WorkDesk.Views;
 using System;
 using System.Collections.Generic;
 using System.Configuration;

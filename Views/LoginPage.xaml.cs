@@ -1,10 +1,10 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows;
-using DBTestWPF.ViewModels;
-using DBTestWPF.Models;
-using WorkDesk.Views;
+using WorkDesk.ViewModels;
+using WorkDesk.Models;
 
-namespace DBTestWPF.Views
+namespace WorkDesk.Views
 {
     /// <summary>
     /// Interaction logic for LoginPage.xaml
@@ -100,25 +100,35 @@ namespace DBTestWPF.Views
 
         private void DeleteTeamBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (TeamBox.SelectedItem is null)
+            try
             {
-                MessageBox.Show("You have to select a team!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                if (TeamBox.SelectedItem is null)
+                {
+                    MessageBox.Show("You have to select a team!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
+                else
+                {
+                    var delete = mvm.TeamList
+                        .Where(x => x == TeamBox.SelectedItem);
+
+                    mvm.dbContext.Remove(delete);
+                    mvm.dbContext.SaveChanges();
+                    TeamBox.Items.Refresh();
+                }
             }
 
-            else
+            catch (Exception ex)
             {
-                var delete = mvm.TeamList
-                    .Where(x => x == TeamBox.SelectedItem);
-
-                mvm.dbContext.Remove(delete);
-                mvm.dbContext.SaveChanges();
-                TeamBox.Items.Refresh();
+                MessageBox.Show(ex.Message);
             }
+          
+          
         }
 
         private void DeleteAllTeams_Click(object sender, RoutedEventArgs e)
         {
-            ConfirmDel conDel = new();
+            ConfirmDelAllTeams conDel = new();
             conDel.Show();
         }
 

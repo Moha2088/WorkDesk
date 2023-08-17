@@ -1,36 +1,65 @@
-﻿using DBTestWPF.Data_Access;
-using DBTestWPF.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.CodeDom;
+﻿using WorkDesk.Data_Access;
+using WorkDesk.Models;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
-namespace DBTestWPF.ViewModels
+namespace WorkDesk.ViewModels
 {
-    public class MainViewModel
+    public class MainViewModel : INotifyPropertyChanged
     {
         public MyDBContext dbContext = new();
 
         public MainViewModel()
         {
+            LoadData();
+        }
+
+        void LoadData()
+        {
             var readUsers = from user in dbContext.UsersWPF
-                            select user;
-
+                select user;
+            
             var readTeam = from teams in dbContext.Team
-                           select teams;
-
+                select teams;
+            
             DataList = readUsers.ToList();
             TeamList = readTeam.ToList();
         }
 
-        public List<User> DataList = new();
+        private List<User> datalist;
 
-        public List<Team> TeamList = new();
+        public List<User> DataList
+        {
+            get => datalist;
+            set
+            {
+                datalist = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private List<Team> teamlist;
+
+        public List<Team> TeamList
+        {
+            get => teamlist;
+
+            set
+            {
+                teamlist = value;
+                OnPropertyChanged();
+            }
+        }
+
 
         // public List<User> DataListDesc = new();
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

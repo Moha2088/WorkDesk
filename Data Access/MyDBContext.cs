@@ -1,15 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using DBTestWPF.Models;
+using WorkDesk.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Data.SqlClient;
 using System.Windows;
 
-namespace DBTestWPF.Data_Access
+namespace WorkDesk.Data_Access
 {
     public class MyDBContext : DbContext
     {

@@ -2,13 +2,13 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Documents;
-using DBTestWPF.Models;
-using DBTestWPF.ViewModels;
-using DBTestWPF.Views;
+using WorkDesk.ViewModels;
+using WorkDesk.Views;
+using WorkDesk.Models;
 using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
 
-namespace DBTestWPF
+namespace WorkDesk
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
